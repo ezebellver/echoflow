@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-from image_processor import ImageProcessor
+from src.preprocessing.image_processor import ImageProcessor
 
 
 class VideoProcessor(ImageProcessor):

@@ -24,7 +24,7 @@ def extract_sift_features(image):
     scaled_image = (image * 255).astype(np.uint8)
 
     # Convert the input image to grayscale if it has more than one channel
-    if len(scaled_image.shape) > 2:
+    if len(scaled_image.shape) > 2 and scaled_image.shape[2] != 1:
         gray_image = cv2.cvtColor(scaled_image, cv2.COLOR_BGR2GRAY)
     else:
         gray_image = scaled_image

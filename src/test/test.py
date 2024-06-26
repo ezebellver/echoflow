@@ -1,7 +1,5 @@
 import cv2
-from video_processor import VideoProcessor
-import numpy as np
-
+from src.preprocessing.video_processor import VideoProcessor
 
 # Create an instance of ImageProcessor
 processor = VideoProcessor()
@@ -15,18 +13,17 @@ processor.add_processing_step(processor.denoise_image)
 processor.add_processing_step(processor.edge_detection)
 processor.add_processing_step(processor.contour_detection)
 processor.add_processing_step(processor.edge_subtraction)
-processor.add_processing_step(processor.hough_circle_detection)
 processor.add_processing_step(processor.normalize_image)
 
 
-def preprocess_video_stream(video_stream):
-    """
+"""
     Preprocess input video stream by resizing, converting to grayscale, denoising,
     applying contour detection, and normalizing using custom ImageProcessor.
 
     Parameters:
     - video_stream (cv2.VideoCapture): Video stream object.
     """
+def preprocess_video_stream(video_stream):
 
     while True:
         # Read frame from the video stream
@@ -36,7 +33,6 @@ def preprocess_video_stream(video_stream):
 
         # Preprocess the frame
         preprocessed_frame = processor(frame)
-
 
         # Show the preprocessed frame
         cv2.imshow('Preprocessed Video Stream', preprocessed_frame)

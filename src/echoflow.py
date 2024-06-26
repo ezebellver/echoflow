@@ -1,7 +1,6 @@
 import cv2
-import numpy as np
-from image_processor import preprocess_image
-from feature_extraction import extract_sift_features, suppress_non_roi
+from src.preprocessing.image_processor import preprocess_image
+from src.preprocessing.feature_extraction import extract_sift_features, suppress_non_roi
 from src.video_preprocessing import VideoProcessor
 
 
