@@ -1,6 +1,10 @@
-train: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\train\images
-val: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\valid\images
-test: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\test\images
+# train: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\train\images
+# val: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\valid\images
+# test: C:\Users\bellv\EchoFlowDataset\DatasetYOLO\annotated\test\images
+
+train: C:\Users\bellv\EchoFlowDataset\DatasetColor\train\images
+val: C:\Users\bellv\EchoFlowDataset\DatasetColor\valid\images
+test: C:\Users\bellv\EchoFlowDataset\DatasetColor\test\images
 
 # Number of classes
 nc: 26
